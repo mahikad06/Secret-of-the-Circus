@@ -1,20 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxcdswicc5f4m"]
+[gd_scene load_steps=3 format=3 uid="uid://dxcdswicc5f4m"]
 
 [ext_resource type="Script" uid="uid://dxqpi8iwxcocv" path="res://Scenes/main_screen.gd" id="1_uhp32"]
+[ext_resource type="Texture2D" uid="uid://j0bjouiwuac2" path="res://Assets/closed_curtain.jpg" id="2_0rcro"]
 
-[node name="Main_Screen" type="Node2D"]
+[node name="Start_Screen" type="Node2D"]
 script = ExtResource("1_uhp32")
 
-[node name="Label" type="Label" parent="."]
-offset_left = -316.0
-offset_top = -121.0
-offset_right = 341.0
-offset_bottom = 122.0
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background_1" type="TextureRect" parent="."]
+offset_left = -580.0
+offset_top = -321.0
+offset_right = 575.0
+offset_bottom = 328.0
+texture = ExtResource("2_0rcro")
+
+[node name="title" type="Label" parent="."]
+offset_left = -329.0
+offset_top = -291.0
+offset_right = 328.0
+offset_bottom = -48.0
 theme_override_colors/font_color = Color(0.688705, 0.5601833, 1.0329599, 1)
-theme_override_font_sizes/font_size = 33
-text = "The Secret of the Circus
-press space to start"
+theme_override_font_sizes/font_size = 50
+text = "The Secret of the Circus"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="button_control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="button_control"]
+layout_mode = 0
+offset_left = -142.0
+offset_top = -27.0
+offset_right = 154.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 58
+text = "START"
+
+[connection signal="pressed" from="button_control/Start" to="." method="_on_start_pressed"]

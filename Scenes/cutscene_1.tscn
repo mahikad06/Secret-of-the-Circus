@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://sshkc5l00fgs"]
+
+[node name="Cutscene_1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Button" type="Button" parent="AnimationPlayer"]
+offset_left = -284.0
+offset_top = -223.0
+offset_right = 260.0
+offset_bottom = -36.0
+theme_override_font_sizes/font_size = 30
+text = "cutscene_1 (temporary)"
