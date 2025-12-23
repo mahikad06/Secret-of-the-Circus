@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxcdswicc5f4m"]
 
-[ext_resource type="Script" uid="uid://dxqpi8iwxcocv" path="res://main_screen.gd" id="1_b1vw1"]
+[ext_resource type="Script" uid="uid://dxqpi8iwxcocv" path="res://Scripts/main_screen.gd" id="1_b1vw1"]
 [ext_resource type="Texture2D" uid="uid://j0bjouiwuac2" path="res://Assets/closed_curtain.jpg" id="2_wi85j"]
 
 [node name="Start_Screen" type="Node2D"]
