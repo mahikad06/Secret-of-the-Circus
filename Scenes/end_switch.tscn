@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://7s2nci6how10"]
+
+[ext_resource type="Texture2D" uid="uid://bs2tt840b3a2x" path="res://Scripts/image-removebg-preview (3).png" id="1_8tgup"]
+
+[node name="End Switch" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8tgup")
