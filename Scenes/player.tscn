@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhrjiifk2aqoe"]
+[gd_scene load_steps=13 format=3 uid="uid://dhrjiifk2aqoe"]
 
 [ext_resource type="Script" uid="uid://bqrhgqok8tygy" path="res://Assets/player.gd" id="1_3eola"]
 [ext_resource type="Texture2D" uid="uid://b8ny8bavc8adk" path="res://Assets/Emilie_sprite_sheet.png" id="3_6t5aa"]
+[ext_resource type="Script" uid="uid://f3tfpwmt8it1" path="res://Scenes/animated_sprite_2d.gd" id="3_vgqql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("3_6t5aa")
@@ -72,6 +73,7 @@ texture_filter = 1
 position = Vector2(12, -1)
 sprite_frames = SubResource("SpriteFrames_i042p")
 animation = &"moving"
+script = ExtResource("3_vgqql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 2.5)
