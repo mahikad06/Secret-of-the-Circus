@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 @onready var SPEED = 250.0
-const JUMP_VELOCITY = -550.0
+@onready var JUMP_VELOCITY = -550.0
 
 @onready var animation = $AnimatedSprite2D
 @onready var timer: Timer = $"../Timer"
@@ -33,15 +33,8 @@ func _physics_process(delta: float) -> void:
 @onready var timer2: Timer = $"../Timer"
 @onready var acceleration: float=0.5
 
-#func _process(delta: float):
-#	if get_parent() == level_2:
-#		SPEED += delta*acceleration
-#		print(SPEED)
-		
-#	if Input.is_action_pressed("gettree"):
-#		get_parent()
-#		print(get_parent())
-#func _process(delta: float):
-#	var timePast = delta
-#func _on_body_entered(level2_tilemap):
-#		SPEED += timePast * acceleration
+
+func _on_high_jump_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	velocity.y = -850
+	print(velocity.y)
+	

@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://4y6jissdykb" path="res://Assets/Cutscene1/Cutscene_1-10.png" id="10_tf3ul"]
 [ext_resource type="Texture2D" uid="uid://gntl63olpppm" path="res://Assets/Cutscene1/Cutscene_1-11.png" id="11_hhnfl"]
 [ext_resource type="Texture2D" uid="uid://beb6jeqn1fu0g" path="res://Assets/Cutscene1/Cutscene_1-12.png" id="12_q0b5d"]
-[ext_resource type="Script" uid="uid://bb2okiyctavuy" path="res://Scenes/cutscene_1.gd" id="13_gvpnd"]
+[ext_resource type="Script" uid="uid://bb2okiyctavuy" path="res://Scripts/cutscene_1.gd" id="13_gvpnd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_72hg8"]
 animations = [{

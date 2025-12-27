@@ -3,7 +3,7 @@ extends Node2D
 #BUTTONS
 #--Start 
 func _on_start_pressed():
-	get_tree().change_scene_to_file("res://Scenes/cutscene_1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
 
 func _input(Dialogue):
 	if Dialogue.is_action_pressed("Dialogue"):
