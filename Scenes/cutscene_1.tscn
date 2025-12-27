@@ -1,13 +1,82 @@
-[gd_scene format=3 uid="uid://sshkc5l00fgs"]
+[gd_scene load_steps=15 format=3 uid="uid://sshkc5l00fgs"]
+
+[ext_resource type="Texture2D" uid="uid://dojej6vk7lp0e" path="res://Assets/Cutscene1/Cutscene_1-1.png" id="1_cm2gx"]
+[ext_resource type="Texture2D" uid="uid://b2varltt08xaj" path="res://Assets/Cutscene1/Cutscene_1-2.png" id="2_vr4ek"]
+[ext_resource type="Texture2D" uid="uid://c7pcoptcpyar8" path="res://Assets/Cutscene1/Cutscene_1-3.png" id="3_m125n"]
+[ext_resource type="Texture2D" uid="uid://jn6v02d3lbc0" path="res://Assets/Cutscene1/Cutscene_1-4.png" id="4_tygs8"]
+[ext_resource type="Texture2D" uid="uid://b0m6rq4oa7iob" path="res://Assets/Cutscene1/Cutscene_1-5.png" id="5_a3pnh"]
+[ext_resource type="Texture2D" uid="uid://be1kbk62je6of" path="res://Assets/Cutscene1/Cutscene_1-6.png" id="6_edb28"]
+[ext_resource type="Texture2D" uid="uid://dkjpoarrsvurp" path="res://Assets/Cutscene1/Cutscene_1-7.png" id="7_r4o0u"]
+[ext_resource type="Texture2D" uid="uid://dpde3drpbqj58" path="res://Assets/Cutscene1/Cutscene_1-8.png" id="8_6uc4e"]
+[ext_resource type="Texture2D" uid="uid://cyc7rkt8xuc3" path="res://Assets/Cutscene1/Cutscene_1-9.png" id="9_81yva"]
+[ext_resource type="Texture2D" uid="uid://4y6jissdykb" path="res://Assets/Cutscene1/Cutscene_1-10.png" id="10_tf3ul"]
+[ext_resource type="Texture2D" uid="uid://gntl63olpppm" path="res://Assets/Cutscene1/Cutscene_1-11.png" id="11_hhnfl"]
+[ext_resource type="Texture2D" uid="uid://beb6jeqn1fu0g" path="res://Assets/Cutscene1/Cutscene_1-12.png" id="12_q0b5d"]
+[ext_resource type="Script" uid="uid://bb2okiyctavuy" path="res://Scenes/cutscene_1.gd" id="13_gvpnd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72hg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cm2gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vr4ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m125n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tygs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a3pnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_edb28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r4o0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6uc4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_81yva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tf3ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hhnfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q0b5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Cutscene_1" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Cutscene1" type="AnimatedSprite2D" parent="."]
+position = Vector2(584, 414.99997)
+scale = Vector2(0.56, 0.56)
+sprite_frames = SubResource("SpriteFrames_72hg8")
+frame = 11
+script = ExtResource("13_gvpnd")
 
-[node name="Button" type="Button" parent="."]
-offset_left = -284.0
-offset_top = -223.0
-offset_right = 260.0
-offset_bottom = -36.0
+[node name="follow_button" type="Button" parent="."]
+offset_left = 870.0
+offset_top = 470.0
+offset_right = 1079.0
+offset_bottom = 544.0
 theme_override_font_sizes/font_size = 30
-text = "cutscene_1 (temporary)"
+text = "Follow him"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(590, 411)
+zoom = Vector2(0.7, 0.7)
+
+[connection signal="pressed" from="follow_button" to="Cutscene1" method="_on_follow_button_pressed"]
