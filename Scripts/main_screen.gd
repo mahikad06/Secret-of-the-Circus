@@ -11,4 +11,4 @@ func _input(Dialogue):
 		$Label.modulate = Color.DARK_RED
 
 func _on_l_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
