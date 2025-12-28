@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://y0o5jjlpnckr"]
+
+[ext_resource type="Texture2D" uid="uid://diveykr3mk322" path="res://Assets/Cutscene3/Cutscene_3-1.png" id="1_3cman"]
+[ext_resource type="Texture2D" uid="uid://um50amjtd21i" path="res://Assets/Cutscene3/Cutscene_3-2.png" id="2_trtx4"]
+[ext_resource type="Texture2D" uid="uid://djlf2xd37anw8" path="res://Assets/Cutscene3/Cutscene_3-3.png" id="3_078cy"]
+[ext_resource type="Texture2D" uid="uid://bvewj6wg3kuxu" path="res://Assets/Cutscene3/Cutscene_3-4.png" id="4_fx3ya"]
+[ext_resource type="Texture2D" uid="uid://boa7ouax4sk7u" path="res://Assets/Cutscene3/Cutscene_3-5.png" id="5_0f4uo"]
+[ext_resource type="Texture2D" uid="uid://cj7aufdnw88sw" path="res://Assets/Cutscene3/Cutscene_3-6.png" id="6_682op"]
+[ext_resource type="Texture2D" uid="uid://daq6em3sdt1dq" path="res://Assets/Cutscene3/Cutscene_3-7.png" id="7_w0wb8"]
+[ext_resource type="Texture2D" uid="uid://ddb52sf5swj2s" path="res://Assets/Cutscene3/Cutscene_3-8.png" id="8_2gdgw"]
+[ext_resource type="Script" uid="uid://bvi7hphpar6mu" path="res://animated_cutscene_3.gd" id="9_4wbs7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dscqu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3cman")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_trtx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_078cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fx3ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0f4uo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_682op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w0wb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2gdgw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="cutscene_3" type="Node2D"]
+
+[node name="Animated_cutscene_3" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dscqu")
+frame = 7
+script = ExtResource("9_4wbs7")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -741.0
+offset_top = 163.0
+offset_right = -402.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 40
+text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 46)
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="Button" to="Animated_cutscene_3" method="_on_button_pressed"]
