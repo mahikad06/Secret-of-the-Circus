@@ -42,7 +42,6 @@ theme_override_font_sizes/font_size = 58
 text = "START"
 
 [node name="L2" type="Button" parent="button_control"]
-visible = false
 layout_mode = 0
 offset_left = -348.0
 offset_top = 189.0

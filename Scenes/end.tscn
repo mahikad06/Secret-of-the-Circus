@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbt2dxoqqjk4u"]
+
+[ext_resource type="Texture2D" uid="uid://bm1qa7bnrm56u" path="res://Assets/magicman.png.webp" id="1_02kpm"]
+[ext_resource type="Texture2D" uid="uid://clwkjjc12urh1" path="res://Assets/pixil-frame-0 (13).png" id="1_5j2cu"]
+[ext_resource type="Script" uid="uid://dy6qe5jnvv76x" path="res://Scenes/rich_text_label.gd" id="3_ql4ve"]
+
+[node name="end" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_top = -35.0
+offset_right = 1153.2675
+offset_bottom = 742.0
+texture = ExtResource("1_02kpm")
+expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(962.62506, 181.3125)
+scale = Vector2(0.58541673, 0.5989584)
+texture = ExtResource("1_5j2cu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 896.0
+offset_top = 217.0
+offset_right = 1026.0
+offset_bottom = 264.0
+color = Color(0.09031757, 0.63146013, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 273.0
+offset_top = 208.0
+offset_right = 1268.3658
+offset_bottom = 516.0
+theme_override_font_sizes/normal_font_size = 25
+text = "YOU ESCAPED WITH EVERYONE ELSE!
+GOOD ENDING"
+script = ExtResource("3_ql4ve")

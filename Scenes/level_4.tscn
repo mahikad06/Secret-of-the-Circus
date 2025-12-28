@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpo7equunof35"]
+
+[ext_resource type="Texture2D" uid="uid://clwkjjc12urh1" path="res://Assets/pixil-frame-0 (13).png" id="1_5eaas"]
+[ext_resource type="Texture2D" uid="uid://bm1qa7bnrm56u" path="res://Assets/magicman.png.webp" id="1_wi344"]
+[ext_resource type="Script" uid="uid://i2mfoa71vkg" path="res://Scenes/line_edit.gd" id="2_kdkq3"]
+[ext_resource type="Script" uid="uid://dy6qe5jnvv76x" path="res://Scenes/rich_text_label.gd" id="3_kdkq3"]
+
+[node name="level_4" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1717.2245
+offset_top = 1.0
+offset_right = 1156.2675
+offset_bottom = 1889.0
+texture = ExtResource("1_wi344")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(547, 372.25003)
+scale = Vector2(1.4116666, 1.5024999)
+texture = ExtResource("1_5eaas")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 385.0
+offset_top = 523.0
+offset_right = 700.0
+offset_bottom = 580.0
+text = "Enter text here"
+script = ExtResource("2_kdkq3")
+
+[node name="myLabel" type="Label" parent="LineEdit"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -59.0
+offset_right = 317.0
+theme_override_font_sizes/font_size = 20
+text = "Password Required
+Hint: UNSILLOI"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 191.0
+offset_top = 425.0
+offset_right = 456.0
+offset_bottom = 507.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Password Required
+Hint: UNSILLOI"
+script = ExtResource("3_kdkq3")
+
+[connection signal="text_submitted" from="LineEdit" to="LineEdit" method="_on_text_submitted"]
