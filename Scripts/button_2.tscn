@@ -1,22 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cq8b6n7b8yoe"]
+[gd_scene load_steps=6 format=3 uid="uid://bj1sctglqcxtb"]
 
-[ext_resource type="Script" uid="uid://bnik3esv2andm" path="res://Scripts/button_1.gd" id="1_3c583"]
-[ext_resource type="Texture2D" uid="uid://dvfh7ykfvllyf" path="res://Assets/tiny_people.png" id="2_3c583"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ngepo"]
-atlas = ExtResource("2_3c583")
-region = Rect2(5, 7, 135, 108)
+[ext_resource type="Script" uid="uid://ueekhmuxqqxh" path="res://Scenes/button_2.gd" id="1_85tal"]
+[ext_resource type="Texture2D" uid="uid://dvfh7ykfvllyf" path="res://Assets/tiny_people.png" id="2_wjewu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tokk8"]
-atlas = ExtResource("2_3c583")
+atlas = ExtResource("2_wjewu")
 region = Rect2(140, 7, 135, 108)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8dgcu"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ngepo")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tokk8")
 }],
@@ -26,11 +19,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2k4t"]
-size = Vector2(38, 83.5)
+size = Vector2(32, 71)
 
-[node name="button1" type="Area2D"]
+[node name="button2" type="Area2D"]
 collision_mask = 3
-script = ExtResource("1_3c583")
+script = ExtResource("1_85tal")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

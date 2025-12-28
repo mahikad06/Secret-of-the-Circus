@@ -1,22 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://jddnqa4xr255"]
+[gd_scene load_steps=11 format=3 uid="uid://jddnqa4xr255"]
 
-[ext_resource type="Texture2D" uid="uid://cwll4q78krdfc" path="res://icon.svg" id="1_ph4n5"]
+[ext_resource type="Texture2D" uid="uid://bnoeygcdlawrn" path="res://Assets/cutscene2/Cutscene_2-1.png" id="1_dbkvj"]
+[ext_resource type="Texture2D" uid="uid://cu61wbgfjc47k" path="res://Assets/cutscene2/Cutscene_2-2.png" id="2_4aoan"]
+[ext_resource type="Texture2D" uid="uid://nvqpmj6wl2td" path="res://Assets/cutscene2/Cutscene_2-3.png" id="3_dqfrl"]
+[ext_resource type="Texture2D" uid="uid://c8skxyiwbfpmc" path="res://Assets/cutscene2/Cutscene_2-4.png" id="4_352am"]
+[ext_resource type="Texture2D" uid="uid://c0b0fi5ux6u8u" path="res://Assets/cutscene2/Cutscene_2-5.png" id="5_qgqwn"]
+[ext_resource type="Texture2D" uid="uid://cgmd3tl6aowq3" path="res://Assets/cutscene2/Cutscene_2-6.png" id="6_idv5x"]
+[ext_resource type="Texture2D" uid="uid://bsacjadjcbd6k" path="res://Assets/cutscene2/image0 (2).png" id="7_qaeu7"]
+[ext_resource type="Texture2D" uid="uid://bs7uek0ynf5rq" path="res://Assets/cutscene2/Cutscene_2-8.png" id="8_pbnkw"]
+[ext_resource type="Script" uid="uid://cbqn42et3wvwu" path="res://Scenes/cutscene2animation.gd" id="9_cjxl6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72cub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dbkvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4aoan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dqfrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_352am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qgqwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_idv5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qaeu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pbnkw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="cutscene_2" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(596, 307)
-texture = ExtResource("1_ph4n5")
+[node name="cutscene_2_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(57, -338)
+sprite_frames = SubResource("SpriteFrames_72cub")
+frame = 7
+script = ExtResource("9_cjxl6")
 
-[node name="Label" type="Label" parent="Sprite2D"]
-anchors_preset = -1
-anchor_left = -0.263
-anchor_top = -0.41400003
-anchor_right = 1.3160001
-anchor_bottom = -0.086
-offset_left = -42.336
-offset_top = -64.007996
-offset_right = -86.44801
-offset_bottom = -63.992
-theme_override_font_sizes/font_size = 30
-text = "Cutscene 2"
+[node name="yaybutton" type="Button" parent="."]
+offset_left = -45.0
+offset_top = -333.0
+offset_right = 175.0
+offset_bottom = -220.0
+theme_override_font_sizes/font_size = 40
+text = "Yay!"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(59, -197)
+scale = Vector2(2, 3)
+zoom = Vector2(0.55, 0.55)
+
+[connection signal="pressed" from="yaybutton" to="cutscene_2_animation" method="_on_yaybutton_pressed"]

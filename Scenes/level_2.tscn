@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dpwhcya6t4xe4"]
+[gd_scene load_steps=24 format=4 uid="uid://dpwhcya6t4xe4"]
 
 [ext_resource type="Script" uid="uid://b7idevy8keonm" path="res://Scenes/level_2.gd" id="1_42uki"]
 [ext_resource type="Texture2D" uid="uid://bv70wdgka1lao" path="res://Assets/Sprute.png" id="1_v3rpw"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b1f7u3q5ug24c" path="res://Scenes/killzone.tscn" id="7_055b2"]
 [ext_resource type="Texture2D" uid="uid://78weoww5m174" path="res://Assets/image1.png" id="7_t7v2y"]
 [ext_resource type="Texture2D" uid="uid://bqcd1ochte12v" path="res://Assets/pixil-frame-0 (6).png" id="10_42uki"]
+[ext_resource type="PackedScene" uid="uid://b4x3uwhs8g3n7" path="res://Scenes/button_2.tscn" id="12_ait6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smnlx"]
 texture = ExtResource("1_v3rpw")
@@ -3594,6 +3595,9 @@ monitorable = false
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="button2" parent="." instance=ExtResource("12_ait6c")]
+position = Vector2(2235, 493)
 
 [connection signal="area_entered" from="Platforms/Surprises/highJump" to="Player" method="_on_high_jump_area_entered"]
 [connection signal="area_exited" from="Platforms/Surprises/highJump" to="Player" method="_on_high_jump_area_exited"]

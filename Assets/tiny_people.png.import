@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gntl63olpppm"
-path="res://.godot/imported/Cutscene_1-11.png-b6dda44a5c85e5d0a0be4658b791c2c1.ctex"
+uid="uid://dvfh7ykfvllyf"
+path="res://.godot/imported/tiny_people.png-bfa038dd61a90cdb5cf0e1e1f926744d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutscene1 (2)/Cutscene_1-11.png"
-dest_files=["res://.godot/imported/Cutscene_1-11.png-b6dda44a5c85e5d0a0be4658b791c2c1.ctex"]
+source_file="res://Assets/tiny_people.png"
+dest_files=["res://.godot/imported/tiny_people.png-bfa038dd61a90cdb5cf0e1e1f926744d.ctex"]
 
 [params]
 

@@ -599,7 +599,7 @@ b = Vector2(-116, 1)
 
 [node name="Level 1" type="Node2D"]
 
-[node name="Image2(1)" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
 position = Vector2(395, -256)
 scale = Vector2(2.58, 2.58)
 texture = ExtResource("1_evi0p")
