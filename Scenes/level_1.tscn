@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://dp7p6losebksu"]
 
 [ext_resource type="Texture2D" uid="uid://bqpx4g4mkc3ru" path="res://Assets/Untitled_Artwork (4).png" id="1_8ffim"]
-[ext_resource type="Texture2D" uid="uid://b1lr78e57uo07" path="res://Assets/image2.png" id="1_evi0p"]
+[ext_resource type="Texture2D" uid="uid://beo1xrfeb0b4r" path="res://Assets/image2 (1).png" id="1_evi0p"]
 [ext_resource type="PackedScene" uid="uid://dhrjiifk2aqoe" path="res://Scenes/player.tscn" id="2_8ffim"]
 [ext_resource type="Texture2D" uid="uid://o0qm0il7n8mp" path="res://Assets/image-removebg-preview (3).png" id="2_6444e"]
 [ext_resource type="PackedScene" uid="uid://b1f7u3q5ug24c" path="res://Scenes/killzone.tscn" id="3_xfk5q"]
@@ -599,8 +599,7 @@ b = Vector2(-116, 1)
 
 [node name="Level 1" type="Node2D"]
 
-[node name="Image2" type="Sprite2D" parent="."]
-texture_filter = 1
+[node name="Image2(1)" type="Sprite2D" parent="."]
 position = Vector2(395, -256)
 scale = Vector2(2.58, 2.58)
 texture = ExtResource("1_evi0p")

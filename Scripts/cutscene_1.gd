@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Dialogue"):
 		frame = frame + 1
-		if frame == 11: 
+		if frame == 16: 
 			follow_button.show()
 
 func _on_follow_button_pressed() -> void:
